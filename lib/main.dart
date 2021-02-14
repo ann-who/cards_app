@@ -21,6 +21,7 @@ class MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: 'Some cards',
       theme: ThemeData(
         brightness: Brightness.light,
         primaryColor: color1,
@@ -28,13 +29,21 @@ class MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Sending some cards'),
+          title: Text('Creating some cards'),
           backgroundColor: color3,
         ),
         body: Center(
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
               Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20), // if you need this
+                  side: BorderSide(
+                    color: Colors.grey.withOpacity(0.2),
+                    width: 1,
+                  ),
+                ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -53,11 +62,47 @@ class MyAppState extends State<MyApp> {
                         ),
                       ),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        FlatButton(
+                          child: Text(
+                            'LISTEN',
+                            style: TextStyle(
+                              color: color1,
+                            ),
+                          ),
+                          onPressed: () {
+                            print('Playing!');
+                          },
+                        ),
+                        const SizedBox(width: 10),
+                        FlatButton(
+                          child: Text(
+                            'LATER',
+                            style: TextStyle(
+                              color: color1,
+                            ),
+                          ),
+                          onPressed: () {
+                            print('Sorry');
+                          },
+                        ),
+                        const SizedBox(width: 10),
+                      ],
+                    ),
                   ],
                 ),
                 color: color2,
               ),
               Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20), // if you need this
+                  side: BorderSide(
+                    color: Colors.grey.withOpacity(0.2),
+                    width: 1,
+                  ),
+                ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -76,11 +121,47 @@ class MyAppState extends State<MyApp> {
                         ),
                       ),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        FlatButton(
+                          child: Text(
+                            'WATCH',
+                            style: TextStyle(
+                              color: color1,
+                            ),
+                          ),
+                          onPressed: () {
+                            print('Playing!');
+                          },
+                        ),
+                        const SizedBox(width: 10),
+                        FlatButton(
+                          child: Text(
+                            'LATER',
+                            style: TextStyle(
+                              color: color1,
+                            ),
+                          ),
+                          onPressed: () {
+                            print('Sorry');
+                          },
+                        ),
+                        const SizedBox(width: 10),
+                      ],
+                    ),
                   ],
                 ),
-                color: color4,
+                color: color5,
               ),
               Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20), // if you need this
+                  side: BorderSide(
+                    color: Colors.grey.withOpacity(0.2),
+                    width: 1,
+                  ),
+                ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -99,11 +180,47 @@ class MyAppState extends State<MyApp> {
                         ),
                       ),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        FlatButton(
+                          child: Text(
+                            'READ',
+                            style: TextStyle(
+                              color: color1,
+                            ),
+                          ),
+                          onPressed: () {
+                            print('Reading!');
+                          },
+                        ),
+                        const SizedBox(width: 10),
+                        FlatButton(
+                          child: Text(
+                            'LATER',
+                            style: TextStyle(
+                              color: color1,
+                            ),
+                          ),
+                          onPressed: () {
+                            print('Sorry');
+                          },
+                        ),
+                        const SizedBox(width: 10),
+                      ],
+                    ),
                   ],
                 ),
                 color: color2,
               ),
               Card(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20), // if you need this
+                  side: BorderSide(
+                    color: Colors.grey.withOpacity(0.2),
+                    width: 1,
+                  ),
+                ),
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
@@ -122,13 +239,43 @@ class MyAppState extends State<MyApp> {
                         ),
                       ),
                     ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+                        FlatButton(
+                          child: Text(
+                            'LISTEN',
+                            style: TextStyle(
+                              color: color1,
+                            ),
+                          ),
+                          onPressed: () {
+                            print('Playing!');
+                          },
+                        ),
+                        const SizedBox(width: 10),
+                        FlatButton(
+                          child: Text(
+                            'LATER',
+                            style: TextStyle(
+                              color: color1,
+                            ),
+                          ),
+                          onPressed: () {
+                            print('Sorry');
+                          },
+                        ),
+                        const SizedBox(width: 10),
+                      ],
+                    ),
                   ],
                 ),
-                color: color4,
+                color: color5,
               ),
             ],
           ),
         ),
+        backgroundColor: color1,
       ),
     );
   }
